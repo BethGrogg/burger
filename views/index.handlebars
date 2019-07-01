@@ -1,33 +1,77 @@
-<h1>Burgers!</h1>
+<div class="container">
 
-<h2>Burgers that haven't been eaten!</h2>
+<table class="table">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 align="center">Burgers!</h1>
+    </div>
+  </div>
+</table>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<div class="row" style="opacity: 0.8">
+  <div class="col-md-6">
+    <table class="table">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Burgers that haven't been eaten!</h2>
+        </div>
+          <div class="row">
+            <div class="col-md-12">
+              
+                  {{#each burgers}}
+                  {{#unless devoured}}
+                  {{> burgers/burger-block devoured=false}}
+                  {{/unless}}
+                  {{/each}}
+                
+            </div>
+          </div>
+    </table>  
+  </div>
 
-<h2>Burgers that were devoured!</h2>
+  <div class="col-md-6">  
+    <table class="table border" style="opacity: 0.8">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Burgers that were devoured!</h2>
+        </div>
+          <div class="row">
+            <div class="col-md-12">
+      
+  
+              
+                  {{#each burgers}}
+                  {{#if devoured}}
+                  <p class="bg-light">{{burger_name}}</p>
+                  {{/if}}
+                  {{/each}}
+                
+            </div>
+          </div>
+  
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-     <li>{{burger_name}}</li>
-    {{/if}}
-  {{/each}}
-</ul>
+    </table>
+  </div>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-3"></div>
+  <div class="table border bg-light rounded burger-add col-md-6" align="center" style="opacity: 0.8">
+    <h2>Add a Burger</h2>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="ca">Burger Name:</label>
+          <input type="text" id="ca" name="burger_name">
   
  
-  <button type="submit">Add Burger</button>
+          <button class="btn btn-primary" type="submit">Add Burger</button>
+        </div>
+      </form>
+
   </div>
-</form>
+  <div class="col-md-3"></div>
+  </div>
+</div>
