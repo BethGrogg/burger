@@ -23,7 +23,7 @@ body {
 
   p {
       width: 500px;
-      padding: 10px;
+      padding: 2px 0 15px 10px;
       margin: 10px;
   }
 
@@ -31,5 +31,10 @@ body {
 
     width: 400px;
     
+  }
+
+  .devoured-burger {
+
+    margin-bottom: 10px;
   }
     
