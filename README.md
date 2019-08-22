@@ -6,4 +6,6 @@ The app utilizes html, css, bootstrap, handlebars, mysql, express and node.
 
 This app was created by Bethany Grogg for the UNH Bootcamp Program.
 
+![Burger](/Burger.png)
+
 https://github.com/BethGrogg/burger
